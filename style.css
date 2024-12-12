@@ -1,0 +1,405 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Josefin sans;
+    }
+
+    html, body{
+        height: 100%;
+        width: 100%;
+    }
+
+    #main{
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    #nav{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 4vw;
+        width: 100%;
+        height: 10vh;
+        background-color: white;
+    }
+
+    #nav #links {
+        position: relative;
+        display: flex;
+        gap: 40px;
+    }
+
+    #nav-right{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+    }
+
+    #nav-right i{
+        display: none;
+    }
+
+    #links a{
+        text-decoration: none;
+        color: black;
+        font-weight: 600;
+        font-size: 15px;
+        transition: all 0.3s ease;
+    }
+
+    #links a:hover{
+        text-decoration: underline 2px solid #FBAC77;
+    }
+    #nav button{
+        padding: 9px 28px;
+        background-color: #FBAC77;
+        border: none;
+        border-radius: 0.3vw;
+        color: #381e0d;
+        font-size: 12px;
+        font-weight: 600;
+        transition: all 0.5s ease;
+
+    }
+
+    #nav button:hover{
+        background-color: #444;
+        color: white;
+        transition: 0.4s ease;
+    }
+
+    #home{
+        width: 100%;
+        height: 90vh;
+        display: flex;
+    }
+
+    #left{
+        position: relative;
+        width: 35%;
+        min-height: inherit;
+    }
+
+    #text{
+        position: absolute;
+        right: -30%;
+        width: 80%;
+        top: 10%;
+    }
+
+    #text h1{
+        font-size: 3vw;
+    }
+
+    #text p{
+        width: 50%;
+        margin: 2vw 0;
+        font-size: 1.3vw;
+    }
+
+    #text button{
+        padding: 1vh 3.2vw;
+        border: none;
+        background-color: #FBAC77;
+        color: #381e0d;
+        border-radius: 0.3vw;
+        font-weight: 600;
+        font-size: 1.3vw;
+        transition: all 0.5s ease;
+    }
+
+    #text button:hover{
+        background-color: #444;
+        color: white;
+        transition: 0.4s ease;
+    }
+    #center{
+        width: 40%;
+        min-height: inherit;
+        overflow: hidden;
+    }
+
+    #center img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    #right{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding: 5vw;
+        width: 25%;
+        min-height: inherit;
+    }
+
+    #circle{
+        display: flex;
+        width: 7vw;
+        height: 7vw;
+        border-radius: 50%;
+        background-color: #FBAC77;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+    }
+
+    #circle i{
+        color: #381e0d;
+        font-size: 1.5vw;
+    }
+
+    #right #details{
+        position: absolute;
+        top: 50%;
+    }
+    #right #details .data{
+        margin-top: 2vh;
+    }
+
+    #right #details .data h5{
+        font-size: 1.3vw;
+    }
+
+    #right #details .data h6{
+        align-items: center;
+        justify-content: center;
+        font-size: 1vw;
+        font-weight: 400;
+        opacity: .4;
+        
+    }
+
+    #circle:hover{
+        width: 9vw;
+        height: 9vw;
+    }
+    #img #icons{
+        width: 100%;
+        bottom: -3vw;
+        position: absolute;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        font-size: 2vw;
+    }
+
+    #img {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        bottom: 12vh;
+        width: 18.5vh;
+        height: 12vh;
+        background-position: center;
+        background-size: cover;
+        background-image: url(https://images.unsplash.com/photo-1522091759069-9fe8e6826b7f?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+        transition: all 0.5s ease;
+
+    }
+
+    #img:hover {
+        height: 14vh;
+        width: 20vw;
+    }
+
+    @media (max-width: 500px) {
+        #nav #links{
+            display: none;
+        }
+
+        #nav-right i{
+            display: initial;
+            font-size: 4vw;
+        }
+
+        #home{
+            flex-direction: column;
+        }
+
+        #home #left{
+            width: 100%;
+            flex-direction: column;
+            min-height: 10vh;
+            padding: 5vh;
+        }
+
+        #home #left #text{
+            position: static;
+        }
+        
+        #text h1{
+            font-size: 6vw;
+        }
+
+        #text p{
+            width: 100%;
+            font-size: 3vw;
+        }
+
+        #text button{
+            font-size: 2.5vw;
+        }
+
+        #center{
+            width: 100%;
+            min-height:80vh;
+            object-position: center;
+        }
+
+        #right{
+            width: 100%;
+            min-height: 50vh;
+            padding: 5vw 10vw;
+            display: flex;
+        }
+        #img{
+            height: 25vw;
+            width: 44vw;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #img:hover {
+            height: 28vw;
+            width: 55vw;
+        }
+
+        #img #icons{
+            margin-bottom: -2vh;
+            font-size: 3vw;
+            
+        }
+        #right #details{
+            position: absolute;
+            right: 10vw;
+            top: 7vh;
+        }
+
+        #right #details .data h5{
+            font-size: 3vw;
+        }
+        #right #details .data h6{
+            font-size: 2vw;
+        }
+
+        #circle{
+            position: absolute;
+            top: 8.5vh;
+            height: 15vw;
+            width: 15vw;
+        }
+
+        #circle:hover{
+            width: 18vw;
+            height: 18vw;
+        }
+
+        #circle i{
+            font-size: 3vw;
+        }
+    }
+    @media (min-width:501px) and (max-width: 768px) {
+        #nav #links{
+            display: none;
+        }
+
+        #nav-right i{
+            display: initial;
+            font-size: 18px;
+        }
+
+        #home{
+            flex-direction: column;
+        }
+
+        #home #left{
+            width: 100%;
+            flex-direction: column;
+            min-height: 10vh;
+            padding: 5vh;
+        }
+
+        #home #left #text{
+            position: static;
+        }
+        
+        #text h1{
+            font-size: 6vw;
+        }
+
+        #text p{
+            width: 100%;
+            font-size: 2vw;
+        }
+
+        #text button{
+            font-size: 2.4vw;
+        }
+
+        #center{
+            width: 100%;
+            min-height:80vh;
+            object-position: center;
+            flex-direction: row
+        }
+
+        #right{
+            width: 100%;
+            min-height: 50vh;
+            padding: 5vw 10vw;
+            display: flex;
+        }
+        #img{
+            height: 20vw;
+            width: 35vw;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        
+        #img:hover{
+            height: 24vw;
+            width: 50vw;
+        }
+
+        #img #icons{
+            margin-bottom: -2vh;
+            font-size: 3vw;
+            
+        }
+        #right #details{
+            position: absolute;
+            right: 10vw;
+            top: 7vh;
+        }
+
+        #right #details .data h5{
+            font-size: 2vw;
+        }
+        #right #details .data h6{
+            font-size: 1vw;
+        }
+
+        #circle{
+            position: absolute;
+            top: 8.5vh;
+            height: 6vw;
+            width: 6vw;
+        }
+
+        #circle:hover{
+            width: 8vw;
+            height: 8vw;
+        }
+
+        #circle i{
+            font-size: 2vw;
+        }
+    }
